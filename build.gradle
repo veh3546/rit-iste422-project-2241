@@ -1,0 +1,23 @@
+plugins {
+id 'java'
+id 'application'
+}
+repositories {
+mavenCentral()
+}
+dependencies {
+implementation 'commons-codec:commons-codec:1.6'
+testImplementation 'junit:junit:4.12'
+}
+ext {
+    javaMainClass = 'RunEdgeConvert'
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+application {
+    mainClass = javaMainClass
+}
+
